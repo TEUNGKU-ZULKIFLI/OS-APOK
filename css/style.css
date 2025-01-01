@@ -1,0 +1,179 @@
+/* ===========================
+   FONT FACES
+   =========================== */
+   @font-face {
+    font-family: 'FontTtd';
+    src: url('../assets/fonts/DancingScript-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FontTtd02';
+    src: url('../assets/fonts/TheSignature-lgzdq.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Font3D';
+    src: url('../assets/fonts/BungeeShade-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Font3D02';
+    src: url('../assets/fonts/ArshineExtruderight-4nZ99.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'FontAstigmatic';
+    src: url('../assets/fonts/Righteous-Regular.ttf') format('truetype');
+}
+
+
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+body {
+    font-family: 'FontAstigmatic', Arial, sans-serif;
+    background-color: #001f3f; /* Dark blue background */
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===========================
+   HEADER STYLES
+   =========================== */
+.container {
+    margin-top: 20%; /* Pushes the container down */
+}
+
+#header-content h1 {
+    font-size: 2.5rem; /* Main header size */
+}
+
+#header-content p {
+    font-family: 'FontTtd'; /* Special font for subtitle */
+    font-size: 1.5rem; /* Subtitle size */
+    margin-top: 10px; /* Spacing above the subtitle */
+}
+
+/* Button styling */
+#header-content button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px 15px;
+    border: none;
+    border-radius: 25px; /* Rounded buttons */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#header-content button:hover {
+    scale: 1.1; /* Hover animation */
+}
+
+#header-content button#ka-btn:hover {
+    background-color: green;
+    color: white;
+}
+
+#header-content button#golom-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* ===========================
+   NAVIGATION STYLES
+   =========================== */
+.nav-container {
+    position: fixed;
+    bottom: 2%; /* Fixed at the bottom */
+    display: flex;
+    background: rgba(255, 255, 255, 0.25); /* Semi-transparent background */
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.nav-item {
+    margin: 0 20px; /* Spacing between navigation items */
+}
+
+.nav-item img {
+    width: 40px; /* Icon size */
+    height: 40px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-item a:hover img {
+    transform: translateY(-5px) scale(1.2); /* Hover animation */
+}
+
+/* ===========================
+   CUSTOM ALERT STYLES
+   =========================== */
+   #custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.500); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#custom-alert.hidden {
+    display: none; /* Hidden by default */
+}
+
+.alert-content {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease;
+    max-width: 300px;
+}
+
+#alert-message {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#alert-ok-btn {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#alert-ok-btn:hover {
+    background-color: #0056b3;
+    scale: 1.1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
